@@ -7,6 +7,20 @@
     <header>
       <h1><%= title %></h1>
     </header>
-    <p><%= body %></p>
+    <p>Last updated at: <%= Time.at(last_updated_at, in: "+09:00").strftime("%Y-%m-%d %H:%M (JST)") %></p>
+    <% feeds.each do |feed_url, feed| %>
+      <section>
+      <h2><%= feed.title %></h2>
+      <p>From <a href="<%= feed_url %>" target="_blank"><%= feed_url %></a></p>
+      <ul>
+        <% feed.entries.sort_by(&:published).reverse.take(20).each do |entry| %>
+        <li>
+          <a href="<%= entry.url %>" target="_blank"><%= entry.title %></a>
+        </li>
+        <% end %>
+      </ul>
+      <p>and more on <a href="<%= feed.url %>" target="_blank"><%= feed.url %></a></p>
+    </section>
+    <% end%>
   </body>
 </html>

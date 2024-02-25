@@ -14,6 +14,7 @@ feed_urls = %w[
 ]
 
 feeds = feed_urls.map { |feed_url|
+  puts "Processing: #{feed_url}"
   [
     feed_url,
     Feedjira.parse(Faraday.get(feed_url).body)

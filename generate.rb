@@ -10,7 +10,6 @@ feed_urls = %w[
   https://junebako.github.io/sff/june29/zakki.xml
   https://listen.style/p/kimagurefm/rss
   https://listen.style/p/juneboku-life/rss
-  https://june29.substack.com/feed?sectionId=70158
 ]
 
 feeds = feed_urls.map { |feed_url|

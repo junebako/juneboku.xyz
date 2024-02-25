@@ -15,10 +15,10 @@ feed_urls = %w[
 
 feeds = feed_urls.map { |feed_url|
   puts "Processing: #{feed_url}"
-  [
-    feed_url,
-    Feedjira.parse(Faraday.get(feed_url).body)
-  ]
+  feed = Feedjira.parse(Faraday.get(feed_url).body)
+  puts "  #{feed.title} (#{feed.entries.size} entries)"
+
+  [feed_url, feed]
 }
 
 last_updated_at = feeds.map { |_, feed| feed.entries.sort_by(&:published).last.published }.max

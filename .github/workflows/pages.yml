@@ -35,7 +35,7 @@ jobs:
       - name: Generate HTML
         run: |
           bundle install
-          bundle exec ruby generate.rb > ./public/index.html
+          bundle exec ruby generate.rb
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

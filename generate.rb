@@ -23,4 +23,4 @@ feeds = feed_urls.map { |feed_url|
 
 last_updated_at = feeds.map { |_, feed| feed.entries.sort_by(&:published).last.published }.max
 
-puts ERB.new(File.read("template.erb")).result(binding)
+File.write("./public/index.html", ERB.new(File.read("template.erb")).result(binding))

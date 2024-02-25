@@ -33,7 +33,9 @@ jobs:
         with:
           ruby-version: "3.3.0"
       - name: Generate HTML
-        run: ruby generate.rb > ./public/index.html
+        run: |
+          bundle install
+          bundle exec ruby generate.rb > ./public/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

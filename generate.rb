@@ -1,10 +1,6 @@
-require "bundler/inline"
+require "bundler"
 require "erb"
-
-gemfile do
-  gem "faraday"
-  gem "feedjira"
-end
+Bundler.require
 
 title = "🐣 juneboku.xyz 🌲"
 body = "juneboku.xyz"

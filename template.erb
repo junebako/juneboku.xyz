@@ -8,6 +8,7 @@
     <header>
       <h1><%= title %></h1>
     </header>
+    <p>大和田純の更新情報です。</p>
     <p>Last updated at: <%= Time.at(last_updated_at, in: "+09:00").strftime("%Y-%m-%d %H:%M (JST)") %></p>
     <% feeds.each do |feed_url, feed| %>
       <section>

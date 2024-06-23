@@ -6,8 +6,8 @@ title = "🐣 juneboku.xyz 🌲"
 body = "juneboku.xyz"
 
 feed_urls = %w[
-  https://junebako.github.io/sff/june29/nikki.xml
-  https://junebako.github.io/sff/june29/zakki.xml
+  https://junebako.github.io/sff/juneboku/nikki.xml
+  https://junebako.github.io/sff/juneboku/zakki.xml
   https://listen.style/p/kimagurefm/rss
   https://listen.style/p/juneboku-life/rss
 ]

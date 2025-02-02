@@ -8,8 +8,8 @@ body = "juneboku.xyz"
 feed_urls = %w[
   https://junebako.github.io/sff/juneboku/nikki.xml
   https://junebako.github.io/sff/juneboku/zakki.xml
-  https://listen.style/p/kimagurefm/rss
-  https://listen.style/p/juneboku-life/rss
+  https://rss.listen.style/p/kimagurefm/rss
+  https://rss.listen.style/p/juneboku-life/rss
 ]
 
 feeds = feed_urls.map { |feed_url|
